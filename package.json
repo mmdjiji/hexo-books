@@ -18,7 +18,7 @@
     "douban"
   ],
   "dependencies": {
-    "@babel/runtime": "^7.18.0",
+    "@babel/runtime": "^7.19.0",
     "cheerio": "^1.0.0-rc.12",
     "ejs": "3.1.8",
     "encoding": "^0.1.13",
