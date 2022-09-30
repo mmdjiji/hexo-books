@@ -1,0 +1,45 @@
+{
+  "name": "hexo-books",
+  "version": "1.0.0",
+  "description": "Hexo 阅读页面插件",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard --fix && ejslint templates/*.ejs",
+    "build": "babel src/index.js --out-file index.js && babel src/lib/util.js --out-file dist/util.js && babel src/lib/get-bk-data.js --out-file dist/get-bk-data.js && babel src/lib/book-generator.js --out-file dist/book-generator.js && babel src/templates/index.js --out-file dist/templates/index.js --presets minify && babel --no-babelrc src/templates/pagination.js --out-file dist/templates/pagination.js --presets minify && cleancss src/templates/index.css -O2 -o dist/templates/index.css",
+    "ejslint": "ejslint templates/*.ejs"
+  },
+  "author": "JiJi <i@mmdjiji.com>",
+  "license": "Apache Licence 2.0",
+  "keywords": [
+    "generator",
+    "plugin",
+    "books",
+    "hexo",
+    "douban"
+  ],
+  "dependencies": {
+    "@babel/runtime": "^7.18.0",
+    "bangumi-data": "^0.3.91",
+    "cheerio": "^1.0.0-rc.12",
+    "ejs": "3.1.8",
+    "encoding": "^0.1.13",
+    "hexo-fs": "^3.1.0",
+    "hexo-i18n": "^1.0.0",
+    "hexo-log": "^3.0.0",
+    "node-fetch": "^2.6.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmdjiji/hexo-books.git"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.0",
+    "@babel/plugin-transform-runtime": "^7.18.0",
+    "@babel/preset-env": "^7.18.0",
+    "babel-preset-minify": "^0.5.2",
+    "clean-css-cli": "^5.6.0",
+    "ejs-lint": "^1.2.2",
+    "eslint": "^8.16.0"
+  }
+}

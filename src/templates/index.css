@@ -1,0 +1,201 @@
+.book-tabs {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.book-tab {
+    padding: 5px;
+}
+
+a.book-tab {
+    text-decoration: none;
+}
+
+.book-active {
+    background: #657b83;
+    color: #fff;
+}
+
+.book-item {
+    padding-bottom: 10px;
+    position: relative;
+    clear: both;
+    padding: 10px 0;
+    border-bottom: 1px #ddd solid;
+    min-height: 180px;
+}
+
+@media screen and (max-width: 600px) {
+    .book-item {
+        width: 100%;
+    }
+}
+
+.book-picture {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 110px;
+}
+
+.book-picture img {
+    margin: 10px 0;
+}
+
+.book-info {
+    padding-left: 120px;
+    margin-top: 10px;
+}
+
+.book-meta {
+    font-size: 12px;
+    padding-right: 10px;
+    height: 45px;
+}
+
+.book-comments {
+    font-size: 12px;
+    margin-top: 10px
+}
+
+.book-comments > p {
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.book-pagination {
+    margin-top: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.book-button {
+    padding: 5px;
+}
+
+.book-button:hover {
+    background: #657b83;
+    color: #fff;
+}
+
+.book-hide {
+    display: none;
+}
+
+.book-show {
+    display: block;
+}
+
+.book-title {
+    font-size: 18px;
+}
+
+.book-title a {
+    line-height: 1;
+    text-decoration: none;
+}
+
+.book-info-items {
+    font-size: 12px;
+    color: #555;
+    padding-top: 10px;
+    line-height: 1;
+    float: left;
+    width: 100%;
+}
+
+.book-info-item {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    height: 34px;
+}
+
+.book-info-label {
+    display: block;
+    line-height: 12px;
+}
+
+.book-info-item em {
+    display: block;
+    padding-top: 6px;
+    line-height: 17px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.book-info-total {
+    padding-top: 11px;
+    display: block;
+    line-height: 12px;
+    font-weight: bold;
+}
+
+.book-info-item-score {
+    border-right: 1px solid #0000;
+    width: 50px;
+}
+
+.book-info-label-em {
+    color: rgba(0, 0, 0, 0);
+    opacity:0;
+    visibility:hidden;
+    line-height: 6px !important;
+    padding: 0 !important;
+}
+
+@media (max-width:650px) {
+    .book-coin,
+    .book-type {
+        display:none;
+    }
+    .book-info-item{
+        width: 16%;
+    }
+}
+@media (max-width:590px) {
+    .book-danmaku,
+    .book-wish {
+        display: none;
+    }
+    .book-info-item {
+        width: 19%;
+    }
+}
+
+@media (max-width:520px) {
+    .book-play,
+    .book-doing {
+        display: none;
+    }
+
+    .book-info-item {
+        width: 24%;
+    }
+}
+
+@media (max-width:480px) {
+    .book-follow,
+    .book-collect {
+        display: none;
+    }
+
+    .book-info-item {
+        width: 30%;
+    }
+}
+@media (max-width:400px) {
+    .book-area {
+        display: none;
+    }
+
+    .book-info-item {
+        width: 45%;
+    }
+}

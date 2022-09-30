@@ -1,0 +1,25 @@
+<div class="book-item">
+    <div class="book-picture">
+        <% if(download_image) { %>
+        <img src="<%= lazyload ? ("/images/books/loading.gif") : `/images/books/${item.image.match(/s\d+.jpg/)[0]}` %>" data-src="<%= `/images/books/${item.image.match(/s\d+.jpg/)[0]}` %>" referrerPolicy="no-referrer" width="110" style="width:110px;margin:<%= margin %> auto;" />
+        <% } else { %>
+        <img src="<%= lazyload ? ("/images/books/loading.gif") : item.image %>" data-src="<%= item.image %>" referrerPolicy="no-referrer" width="110" style="width:110px;margin:<%= margin %> auto;" />
+        <% } %>
+    </div>
+    <div class="book-info">
+        <div class="book-title">
+            <a target="_blank" href="https://book.douban.com/subject/<%= item.id %>"><%= item.title || 'Unknown' %></a>
+        </div>
+        <div class="book-meta">
+            <span class="book-info-items" <%- color_meta  %>>
+                <span class="book-info-item" <%- color_meta  %>>
+                <% if(item.pub) { %>
+                <span class="book-info-total"><%= item.pub %></span><em
+                    class="book-info-label-em">0</em>
+                </span>
+                <% } %>
+            </span>
+        </div>
+        <div class="book-comments" <%- color %>><p>简介：<%= item.intro || "暂无简介" %></p> </div>
+    </div>
+</div>
