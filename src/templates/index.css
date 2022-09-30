@@ -55,7 +55,7 @@ a.book-tab {
 
 .book-comments {
     font-size: 12px;
-    margin-top: 10px
+    margin-top: 10px;
 }
 
 .book-comments > p {
@@ -105,7 +105,7 @@ a.book-tab {
     font-size: 12px;
     color: #555;
     padding-top: 10px;
-    line-height: 1;
+    line-height: 0;
     float: left;
     width: 100%;
 }
@@ -131,7 +131,7 @@ a.book-tab {
 }
 
 .book-info-total {
-    padding-top: 11px;
+    padding-top: -4px;
     display: block;
     line-height: 12px;
     font-weight: bold;
@@ -155,8 +155,8 @@ a.book-tab {
     .book-type {
         display:none;
     }
-    .book-info-item{
-        width: 16%;
+    .book-comments > p {
+        margin-top: 40px;
     }
 }
 @media (max-width:590px) {
@@ -164,8 +164,8 @@ a.book-tab {
     .book-wish {
         display: none;
     }
-    .book-info-item {
-        width: 19%;
+    .book-comments > p {
+        margin-top: 40px;
     }
 }
 
@@ -174,9 +174,8 @@ a.book-tab {
     .book-doing {
         display: none;
     }
-
-    .book-info-item {
-        width: 24%;
+    .book-comments > p {
+        margin-top: 40px;
     }
 }
 
@@ -185,17 +184,15 @@ a.book-tab {
     .book-collect {
         display: none;
     }
-
-    .book-info-item {
-        width: 30%;
+    .book-comments > p {
+        margin-top: 40px;
     }
 }
 @media (max-width:400px) {
     .book-area {
         display: none;
     }
-
-    .book-info-item {
-        width: 45%;
+    .book-comments > p {
+        margin-top: 40px;
     }
 }
