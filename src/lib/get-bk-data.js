@@ -132,7 +132,11 @@ const getImage = (image_url, imagesPath) => {
   if (image_url && !fs.existsSync(`${imagesPath}/${image_url.match(/s\d+.jpg/)[0]}`)) {
     fetch(image_url, {
       method: 'GET',
-      headers: { 'Content-Type': 'application/octet-stream' }
+      headers: { 
+        'Content-Type': 'application/octet-stream',
+        'Referer': 'https://book.douban.com/',
+        'Sec-Fetch-Site': 'cross-site'
+      }
     }).then((res) => res.buffer())
       .then((image) => {
         fs.writeFile(`${imagesPath}/${image_url.match(/s\d+.jpg/)[0]}`, image, 'binary', (err) => {
